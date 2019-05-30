@@ -76,3 +76,41 @@ print(k,np.diag(k))
 h=np.random.rand(4)
 print(h)
 h=np.random.rand(4)
+
+
+
+#Data types in numpy
+#int
+j=np.arange(10)
+print(j.dtype)
+
+#we can specify data type explicitly if we wish to change it explicitly!
+#float
+
+j=np.arange(10,dtype='float')
+print(j.dtype)
+
+j=np.arange(10.0)
+print(j.dtype)
+
+# when we use functions 0's or 1's it will always create the float data type.
+
+j=np.zeros(3)
+print(j.dtype)
+
+j=np.ones(3)
+print(j.dtype)
+
+
+#bool
+j=np.array([True,False])
+print(j.dtype)
+
+#string
+j=np.array(['adfgh','bcvb','ccvbn'])
+print(j.dtype)
+
+#for detail explanation in data types you can go on to
+#https://www.numpy.org/devdocs/user/basics.types.html
+
+
