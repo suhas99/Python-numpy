@@ -114,3 +114,39 @@ print(j.dtype)
 #https://www.numpy.org/devdocs/user/basics.types.html
 
 
+
+# slicing operations on numpy
+# we give start, end and step size and we get a sub array of this
+k = np.arange(10)
+print(k, k[1:5:1])
+
+# We can get value , assign and work with these elements using the ":" and "::" operator
+
+k[5:] = 10
+print(k[5:], k)
+
+# Here -1 is the step size backwards[Start:end:-1 is backwarfds]
+k1 = np.arange(10, 20, 2)
+print(k1)
+k[5:] = k1[::-1]
+print(k, k[:4:-1], k[4:])
+
+# Copy and Views
+
+# Shallow copy(views) and Deep copy()
+#l and l1 both share same memory and shares_memory() can be used to check and it returns a logical vector. and copy() is used to deep copy or force copy.
+l=np.arange(10)
+l1=l[1:8:2]
+l2=l1.copy()
+l2
+print(l,np.shares_memory(l,l1),np.shares_memory(l1,l2))
+
+#Fancy indexing
+l=np.array([10,30,50,60])
+print(l,l[[0,2,3]])
+
+l[[0,2,3]]= -10
+print(l)
+
+
+
